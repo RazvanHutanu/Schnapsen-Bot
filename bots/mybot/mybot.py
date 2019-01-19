@@ -26,6 +26,15 @@ class Bot:
             indicating a move; the first indicates the card played in the trick, the second a
             potential spouse.
         """
+        # See if we're player 1 or 2
+        player = state.whose_turn()
+
+        # Get a list of all legal moves
+        moves = state.moves()
+
+        # Sometimes many moves have the same, highest score, and we'd like the bot to pick a random one.
+        # Shuffling the list of moves ensures that.
+        random.shuffle(moves)
 
         # All legal moves
         moves = state.moves()
