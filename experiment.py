@@ -1,19 +1,13 @@
 """
-
 This script shows an example of how to run a simple computational experiment. The research
 question is as follows:
-
     What is the value of saving your trump cards for the late stages of the game?
-
 As a first step towards answering this question, we will make two assumptions:
-
     1) Players have two options: play randomly, or play highest value non-trump card
     2) Players decide between these two entirely at random
-
 Under these simplified circumstances, how often should players decide to save their trump cards?
 This is a simple question to answer, we simply build rand bots for a range of parameters, and play a few games for each
 combination. We plot the results in a heat map
-
 """
 import matplotlib as mpl
 mpl.use('Agg')
