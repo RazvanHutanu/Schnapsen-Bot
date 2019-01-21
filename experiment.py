@@ -38,12 +38,11 @@ class Bot:
         random.shuffle(moves)
         random_move = moves[0]
         random_move = random.choice(moves)
+
         if random_move == chosen_move:
             random_move = random.choice(moves)
 
         return random_move
-        # if(random_move != chosen_move):
-        #     return random.choice(moves)
 
 def empty(n):
     """

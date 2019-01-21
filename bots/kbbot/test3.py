@@ -14,10 +14,10 @@ d = x + y > -5
 kb = KB()
 
 kb.add_clause(q)
-kb.add_clause(???)
-kb.add_clause(???)
-kb.add_clause(???)
-kb.add_clause(???)
+kb.add_clause(a or c)
+kb.add_clause(a or d)
+kb.add_clause(b or c)
+kb.add_clause(b or d)
 
 for model in kb.models():
     print(model)
