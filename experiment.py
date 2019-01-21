@@ -35,10 +35,15 @@ class Bot:
 
         #IMPLEMENT: Make a random move (but exclude the best non-trump move from above)
         moves = state.moves()
+        random.shuffle(moves)
         random_move = moves[0]
-        random_move = random.shuffle(moves)
-        if(random_move != chosen_move):
-            return random.choice(moves)
+        random_move = random.choice(moves)
+        if random_move == chosen_move:
+            random_move = random.choice(moves)
+
+        return random_move
+        # if(random_move != chosen_move):
+        #     return random.choice(moves)
 
 def empty(n):
     """
